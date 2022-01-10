@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              veryDarkBlue: "hsl(238, 29%, 16%)",
+              softRed: "hsl(14, 88%, 65%)",
+              softViolet: "hsl(273, 75%, 66%)",
+              softBlue: "hsl(240, 73%, 65%)",
+              veryDarkGrayishBlue: "hsl(237, 12%, 33%)",
+              darkGrayishBlue: "hsl(240, 6%, 50%)",
+              lightGrayishBlue: "hsl(240, 5%, 91%)",
+            },
+            fontFamily: {
+              kumbh: ["Kumbh Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body
+    class="w-full min-h-screen mt-40 lg:my-auto bg-gradient-to-b from-softViolet to-softBlue grid place-items-center"
+  >
+    <div
+      class="bg-lightGrayishBlue w-[90%] max-w-[400px] lg:max-w-[80%] min-w-[300px] lg:w-[80%] lg:min-h-[500px] rounded-3xl my-8 lg:my-2 relative transition duration-500"
+    >
+      <div class="relative flex flex-col w-full lg:flex-row transform">
+        <div
+          class="flex flex-col justify-center items-center lg:flex-1 lg:my-auto lg:-ml-16 -mt-[130px] relative lg:pr-16"
+        >
+          <img
+            src="./images/illustration-woman-online-mobile.svg"
+            alt=""
+            srcset=""
+            class="w-[300px] lg:w-[600px]"
+          />
+          <img
+            src="./images/bg-pattern-mobile.svg"
+            alt=""
+            srcset=""
+            class="w-[300px] lg:w-[600px] z-10 -mt-[90px]"
+          />
+          <!-- <img
+            src="./images/illustration-box-desktop.svg"
+            alt=""
+            srcset=""
+            class="z-[100] -mt-[185px] -ml-[185px] w-[120px]"
+          /> -->
+        </div>
+
+        <!-- faq container -->
+        <div class="my-8 text-center lg:text-left lg:flex-1 lg:px-16 px-6">
+          <h1 class="font-bold text-4xl lg:mt-8">FAQ</h1>
+          <!-- item -->
+          <div class="border-b border-darkGrayishBlue/30 mt-6">
+            <div class="py-3 flex justify-between items-center">
+              <h1
+                class="text-veryDarkGrayishBlue text-sm question transition-all duration-200"
+              >
+                How many team members can I invite?
+              </h1>
+              <button class="">
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="transform cheveron-icon"
+                />
+              </button>
+            </div>
+            <!-- toggle text -->
+            <div
+              class="text-left w-10/12 sheveron cheveron-text max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <p class="text-xs pb-3 text-darkGrayishBlue">
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan
+              </p>
+            </div>
+            <!-- toggle text -->
+          </div>
+          <!-- item -->
+          <!-- item -->
+          <div class="border-b border-darkGrayishBlue/30">
+            <div class="py-3 flex justify-between items-center">
+              <h1
+                class="font-bold text-veryDarkBlue text-sm question transition-all duration-200"
+              >
+                What is the maximum file upload size?
+              </h1>
+              <button class="">
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="transform rotate-180 cheveron-icon"
+                />
+              </button>
+            </div>
+            <!-- toggle text -->
+            <div
+              class="text-left w-10/12 cheveron-text overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <p class="text-xs pb-3 text-darkGrayishBlue">
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </div>
+            <!-- toggle text -->
+          </div>
+          <!-- item -->
+          <!-- item -->
+          <div class="border-b border-darkGrayishBlue/30">
+            <div class="py-3 flex justify-between items-center">
+              <h1
+                class="text-veryDarkGrayishBlue text-sm question transition-all duration-200"
+              >
+                How do I reset my password?
+              </h1>
+              <button class="">
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="transform cheveron-icon"
+                />
+              </button>
+            </div>
+            <!-- toggle text -->
+            <div
+              class="text-left w-10/12 cheveron-text max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <p class="text-xs pb-3 text-darkGrayishBlue">
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </div>
+            <!-- toggle text -->
+          </div>
+          <!-- item -->
+          <!-- item -->
+          <div class="border-b border-darkGrayishBlue/30">
+            <div class="py-3 flex justify-between items-center">
+              <h1
+                class="text-veryDarkGrayishBlue text-sm question transition-all duration-200"
+              >
+                Can I cancel subscription ?
+              </h1>
+              <button class="">
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="transform cheveron-icon"
+                />
+              </button>
+            </div>
+            <!-- toggle text -->
+            <div
+              class="text-left w-10/12 cheveron-text max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <p class="text-xs pb-3 text-darkGrayishBlue">
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </div>
+            <!-- toggle text -->
+          </div>
+          <!-- item -->
+          <!-- item -->
+          <div class="border-b border-darkGrayishBlue/30">
+            <div class="py-3 flex justify-between items-center">
+              <h1
+                class="text-veryDarkGrayishBlue text-sm question transition-all duration-200"
+              >
+                Do you provide additional support ?
+              </h1>
+              <button class="transiton">
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="transform cheveron-icon"
+                />
+              </button>
+            </div>
+            <!-- toggle text -->
+            <div
+              class="text-left w-10/12 cheveron-text max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+            >
+              <p class="text-xs pb-3 text-darkGrayishBlue">
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours
+              </p>
+            </div>
+            <!-- toggle text -->
+          </div>
+          <!-- item -->
+        </div>
+        <!-- faq container -->
+      </div>
+    </div>
+  </body>
+</html>
